@@ -4,7 +4,9 @@ using System.IO;
 using System.ServiceProcess;
 using WinSW.Tests.Util;
 using Xunit;
+#if !NET
 using Xunit.Abstractions;
+#endif
 
 namespace WinSW.Tests
 {

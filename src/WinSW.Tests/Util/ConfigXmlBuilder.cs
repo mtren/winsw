@@ -1,6 +1,11 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using Xunit;
+#if(NET)
+using Xunit.v3;
+#else
 using Xunit.Abstractions;
+#endif
 
 namespace WinSW.Tests.Util
 {

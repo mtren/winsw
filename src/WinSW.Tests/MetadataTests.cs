@@ -20,7 +20,8 @@ namespace WinSW.Tests
             foreach (var handle in metadataReader.AssemblyReferences)
             {
                 var assembly = metadataReader.GetAssemblyReference(handle);
-                if (metadataReader.GetString(assembly.Name) != "System.IO.Compression")
+                string assemblyName = metadataReader.GetString(assembly.Name);
+                if (assemblyName != "System.IO.Compression" && assemblyName != "System.Runtime.InteropServices.RuntimeInformation")
                 {
                     Assert.Equal(version, assembly.Version);
                 }

@@ -40,7 +40,6 @@ namespace WinSW.Extensions
         /// Handler, which is being invoked once the child process is started.
         /// </summary>
         /// <param name="process">Process</param>
-        /// <param name="logger">Logger</param>
         /// <exception cref="ExtensionException">Any error during execution</exception>
         void OnProcessStarted(System.Diagnostics.Process process);
 
@@ -48,7 +47,6 @@ namespace WinSW.Extensions
         /// Handler, which is being invoked once the child process is terminated.
         /// </summary>
         /// <param name="process">Process</param>
-        /// <param name="logger">Logger</param>
         /// <exception cref="ExtensionException">Any error during execution</exception>
         void OnProcessTerminated(System.Diagnostics.Process process);
 

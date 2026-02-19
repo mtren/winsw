@@ -23,7 +23,7 @@ namespace WinSW.Logging
 
             if (eventLog is not null)
             {
-                eventLog.WriteEntry(loggingEvent.RenderedMessage, ToEventLogEntryType(loggingEvent.Level));
+                eventLog.WriteEntry(loggingEvent.RenderedMessage ?? "", ToEventLogEntryType(loggingEvent.Level));
                 return;
             }
 
@@ -37,8 +37,10 @@ namespace WinSW.Logging
             }
         }
 
-        private static EventLogEntryType ToEventLogEntryType(Level level)
+        private static EventLogEntryType ToEventLogEntryType(Level? level)
         {
+            if (level == null) return EventLogEntryType.Information;
+
             if (level.Value >= Level.Error.Value)
             {
                 return EventLogEntryType.Error;

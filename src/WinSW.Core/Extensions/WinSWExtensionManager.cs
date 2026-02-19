@@ -129,6 +129,7 @@ namespace WinSW.Extensions
         // TODO: Implement loading of external extensions. Current version supports internal hack
         #region Extension load management
 
+        /// <summary>
         /// Loads extensions according to the configuration file.
         /// </summary>
         /// <param name="logger">Logger</param>
@@ -146,7 +147,6 @@ namespace WinSW.Extensions
         /// Loads extensions from the configuration file
         /// </summary>
         /// <param name="id">Extension ID</param>
-        /// <param name="logger">Logger</param>
         /// <exception cref="Exception">Loading failure</exception>
         private void LoadExtension(string id)
         {

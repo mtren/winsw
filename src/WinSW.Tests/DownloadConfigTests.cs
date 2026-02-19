@@ -1,7 +1,11 @@
 ﻿using System.IO;
 using WinSW.Tests.Util;
 using Xunit;
+#if(NET)
+using Xunit.v3;
+#else
 using Xunit.Abstractions;
+#endif
 
 namespace WinSW.Tests
 {
